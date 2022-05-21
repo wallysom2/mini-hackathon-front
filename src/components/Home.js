@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Parternon from './../assets/img/parthenon-svgrepo-com.svg'
-import Cidade from './../assets/img/Cidade.svg'
+import { Link } from 'react-router-dom';
 
 function Home() {
     return (
@@ -11,7 +11,7 @@ function Home() {
                     <img src={Parternon} alt="logo"></img>
                 </Logo>
                 <Div>
-                    <p>Perguntas</p>
+                    <Link to={`/questions/${question.id}`}>Perguntas</Link>
                     <p>Faça uma pergunta</p>
                 </Div>
             </Header>

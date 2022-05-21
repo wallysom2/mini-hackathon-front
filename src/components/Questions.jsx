@@ -16,26 +16,40 @@ export default function Questions() {
     }, []);
 
     return (
-        <div>
+        <Conteiner>
             <h1>Questions</h1>
             <div>
                 {Questions.map((question) => {
                     return (
-                        <div>
+                        <p>
                             <Link to={`/questions/${question.id}`}>{question.question}</Link>
-                        </div>
+                        </p>
                     )
                 } 
                 )}
 
             </div>
-        </div>
+        </Conteiner>
         
     )
 }
 
 
 const Conteiner = styled.div`
+height: 60px;
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-left: 30px;
+padding-right: 30px;
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weigth: 700;
+    letter-spacing: 0.2em;
+}
 
 `
 
