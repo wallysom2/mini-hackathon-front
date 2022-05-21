@@ -12,8 +12,8 @@ function Home() {
                 </Logo>
                 <Div>
                 <Link to={`/questions`}> Perguntas </Link>
+                <Link to={`/login`}> Faça uma pergunta </Link>
                     
-                    <p>Faça uma pergunta</p>
                 </Div>
             </Header>
             <Background>

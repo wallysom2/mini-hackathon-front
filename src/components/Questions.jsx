@@ -10,7 +10,7 @@ export default function Questions() {
     useEffect(() => {
         const promise = axios.get("https://mini-hackathon-back.herokuapp.com/questions");
         promise.then((answer) => {
-         setQuestions(answer.data)
+            setQuestions(answer.data)
         })
         promise.catch()
     }, []);
@@ -25,35 +25,38 @@ export default function Questions() {
                             <Link to={`/questions/${question.id}`}>{question.question}</Link>
                         </p>
                     )
-                } 
+                }
                 )}
 
             </div>
         </Conteiner>
-        
+
     )
 }
 
 
 const Conteiner = styled.div`
-height: 60px;
-width: 100%;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding-left: 30px;
-padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    h1 { 
+        font-family: 'Righteous', cursive;
+        font-size: 30px;
+        letter-spacing: 0.2em;
+        margin-bottom: 40px;
+    }
 
-p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    font-weigth: 700;
-    letter-spacing: 0.2em;
-}
-
-`
-
-const Pergunta = styled.div`
-
-}
-`
+    p {
+        margin: 20px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weigth: 700;
+        letter-spacing: 0.2em;
+        text-decoration: none;
+        color: #000;
+    }
+  
+`;
