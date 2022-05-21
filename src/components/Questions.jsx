@@ -46,17 +46,16 @@ const Conteiner = styled.div`
         font-family: 'Righteous', cursive;
         font-size: 30px;
         letter-spacing: 0.2em;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
 
     p {
-        margin: 20px;
+        margin: 25px;
         font-family: 'Roboto', sans-serif;
         font-size: 20px;
         font-weigth: 700;
         letter-spacing: 0.2em;
         text-decoration: none;
-        color: #000;
     }
-  
+    
 `;
