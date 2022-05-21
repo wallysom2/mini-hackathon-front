@@ -11,8 +11,10 @@ function Home() {
                     <img src={Parternon} alt="logo"></img>
                 </Logo>
                 <Div>
-                <Link to={`/questions`}> Perguntas </Link>
-                    
+                    <Link to={`/questions`}>
+                        <p>Perguntas</p>
+                    </Link>
+
                     <p>Faça uma pergunta</p>
                 </Div>
             </Header>
@@ -85,6 +87,7 @@ p {
     font-size: 20px;
     font-weigth: 700;
     letter-spacing: 0.2em;
+    margin-top: 15px;
 }
 `
 

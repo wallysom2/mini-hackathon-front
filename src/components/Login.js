@@ -8,7 +8,7 @@ export default () => {
 
     const submitForm = event => {
         localStorage.setItem("user", user)
-        navigate('/questions')
+        navigate('/add-question')
         event.preventDefault()
     }
 
@@ -34,15 +34,25 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     font-size: 25px;
+    background: linear-gradient(45deg, #92B4EC, #FFFFFF, #FFE69A, #FFD24C);
+    background-size: 300% 300%;
+    animation: colors 15s ease infinite;
 
     div {
-        height: 200px;
+        height: 220px;
         width: 300px;
         text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: space-between
     }
+
+    h1 {
+        font-family: 'Righteous', cursive;
+        font-size: 25px;
+        letter-spacing: 0.2em;
+        width: 300px;
+      }
 
     form {
         display: flex;
@@ -53,5 +63,24 @@ const Container = styled.div`
 
     input, button {
         height: 40px;
+        border-radius: 5px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        font-weigth: 400;
+        letter-spacing: 0.2em;
+    }
+
+    @keyframes colors {
+        0% {
+            background-position: 0% 50%;
+        }
+    
+        50% {
+            background-position: 50% 100%;
+        }
+    
+        100% {
+            background-position: 0% 50%;
+        }
     }
 `
