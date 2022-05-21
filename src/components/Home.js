@@ -11,8 +11,8 @@ function Home() {
                     <img src={Parternon} alt="logo"></img>
                 </Logo>
                 <Div>
-                <Link to={`/questions`}> Perguntas </Link>
-                <Link to={`/login`}> Faça uma pergunta </Link>
+                <Link to={`/questions`}> <p>Perguntas</p> </Link>
+                <Link to={`/login`}>  <p>Faça uma pergunta </p></Link>
                     
                 </Div>
             </Header>

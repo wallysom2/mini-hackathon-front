@@ -11,6 +11,7 @@ export default function Questions() {
         const promise = axios.get("https://mini-hackathon-back.herokuapp.com/questions");
         promise.then((answer) => {
             setQuestions(answer.data)
+            console.log(answer.data)
         })
         promise.catch()
     }, []);
@@ -22,7 +23,7 @@ export default function Questions() {
                 {Questions.map((question) => {
                     return (
                         <p>
-                            <Link to={`/questions/${question.id}`}>{question.question}</Link>
+                            <Link to={`/questions/${question._id}`}>{question.question}</Link>
                         </p>
                     )
                 }
@@ -36,12 +37,14 @@ export default function Questions() {
 
 
 const Conteiner = styled.div`
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 50px;
+
     h1 { 
         font-family: 'Righteous', cursive;
         font-size: 30px;
@@ -57,5 +60,23 @@ const Conteiner = styled.div`
         letter-spacing: 0.2em;
         text-decoration: none;
     }
+
+    background: linear-gradient(45deg, #92B4EC, #FFFFFF, #FFE69A, #FFD24C);
+background-size: 300% 300%;
+animation: colors 15s ease infinite;
+
+@keyframes colors {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 50% 100%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
     
 `;
